@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Mobile</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <!-- https://jquerymobile.com/download/ 에서 cdn 방식으로 불러오면 됨. -->
+    <!-- spa : single page 문서 / hcj(html css jquery) -->
+</head>
+<body>
+<main data-role="page" id="page1" data-theme="b">
+    <header data-role="header" data-position="fixed">
+        <a href="" data-icon="home" class="ui-btn-left">HOME</a> <!-- 헤더에만 쓸 수 있는 클래스 -->
+        <h2>메인</h2>
+        <a href="" data-role="gear" class="ui-btn-right">Setting</a>
+        <nav data-role="navbar">
+            <ul>
+                <li><a href="" data-icon="home">One</a></li>
+                <li><a href="#page2" data-icon="star">Two</a></li>
+                <li><a href="#page3" data-icon="back">Three</a></li>
+                <li><a href="#page4" data-icon="forward">Four</a></li>
+                <li><a href="#page5" data-icon="arrow-l">Five</a></li>
+            </ul>
+        </nav>
+    <!-- 
+        클래스 이름
+        https://api.jquerymobile.com/classes/
+        데이터 어트리뷰트
+        https://api.jquerymobile.com/data-attribute/ 
+
+        data-role="button" : 버튼/영역을 구분해주거나 
+        data-iconpos : 아이콘의 위치
+        data-iconshadow	: 아이콘의 위치. 1.5.0. 버전에서는 삭제
+        data-inline : 버튼의 사이즈가 줄어듬.
+
+        Collapsible 박스 형태에 넣어줘야 함.(block 태그)
+        data-collapsed	: true 처음부터 펼쳐져 보이게 
+
+        Collapsible set : 아코디언 만들 때.
+
+        Controlgroup : 버튼을 한줄에 여러개 배치할 때
+        Dialog : 팝업
+    -->
+    </header>
+    <div data-role="content">
+        <ul data-role="listview">
+            <li><a href="#">메인페이지1</a></li>
+            <li><a href="#page2">서브페이지2</a></li>
+            <li><a href="#page3">서브페이지3</a></li>
+        </ul><br><br>
+        <div class="data">
+            <button data-icon="search" data-iconpos="right">검색</button>
+            <button data-icon="alert" data-iconpos="top">알림</button>
+            <button data-icon="info" data-iconpos="bottom">정보</button>
+            <button data-icon="refresh" data-iconpos="notext">새로고침</button>
+        </div>
+    <footer data-role="footer" data-position="fixed"><h2>푸터</h2></footer>
+</main>
+<main data-role="page" id="page2">
+    <header data-role="header" data-position="fixed"><h2>서브2</h2></header>
+    <div data-role="content">
+        <ul data-role="listview">
+            <li><a href="#page1">메인페이지1</a></li>
+            <li><a href="#">서브페이지2</a></li>
+            <li><a href="#page3">서브페이지3</a></li>
+        </ul>
+    </div>
+    <footer data-role="footer" data-position="fixed"><h2>푸터</h2></footer>
+</main>
+<main data-role="page" id="page3">
+    <header data-role="header" data-position="fixed"><h2>서브3</h2></header>
+    <div data-role="content">
+        <ul data-role="listview">
+            <li><a href="#page1">메인페이지1</a></li>
+            <li><a href="#page2">서브페이지2</a></li>
+            <li><a href="#">서브페이지3</a></li>
+        </ul>
+    </div>
+    <footer data-role="footer" data-position="fixed"><h2>푸터</h2></footer>
+</main>
+</body>
+</html>
